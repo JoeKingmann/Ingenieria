@@ -2,13 +2,12 @@
 include("conexion.php");
 include("SessionManager.php");
 
-if(isset($_GET['usuario']) && isset($_GET['password'])){
+if (isset($_GET['usuario']) && isset($_GET['password'])) {
     $usuario = $_GET['usuario'];
     $password = $_GET['password'];
 
     // Establece la conexión con la base de datos
     $conexion = conectar::Conexion();
-
     $consulta = "SELECT * FROM `Usuario` WHERE Rut = :usuario AND Password = :password";
 
     // Preparar la consulta
@@ -24,13 +23,13 @@ if(isset($_GET['usuario']) && isset($_GET['password'])){
     // Obtener el resultado
     $resultado = $stmt->fetch();
 
-    if($resultado){
+    if ($resultado) {
         // Ingreso con exito y se dirige al inicio
         session_start();
         SessionManager::iniciarSesion($resultado['Rut']);
         header('Location: /Ingenieria/inicio.php');
         exit;
-    }else{
+    } else {
         // Redirige nuevamente al inicio para volver a intentarlo
         header('Location: /Ingenieria/index.php');
     }

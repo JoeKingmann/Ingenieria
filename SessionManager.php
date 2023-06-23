@@ -1,15 +1,18 @@
 <?php
 
-class SessionManager {
-    public static function iniciarSesion($idUsuario) {
+class SessionManager
+{
+    public static function iniciarSesion($idUsuario)
+    {
         session_start();
         $_SESSION['Rut_usuario'] = $idUsuario;
     }
 
-    public static function verificarSesion() {
+    public static function verificarSesion()
+    {
         session_start();
 
-        if(isset($_SESSION['Rut_usuario'])){
+        if (isset($_SESSION['Rut_usuario'])) {
             // El usuario ha iniciado sesión, puedes acceder al ID almacenado en la variable de sesión
             $idUsuario = $_SESSION['Rut_usuario'];
 
@@ -20,7 +23,20 @@ class SessionManager {
             exit;
         }
     }
-    public static function cerrarSesion() {
+
+    public static function ingresarSesion()
+    {
+        session_start();
+
+        if (isset($_SESSION['Rut_usuario'])) {
+            // El usuario ha iniciado sesión, puedes acceder al ID almacenado en la variable de sesión
+            $idUsuario = $_SESSION['Rut_usuario'];
+            header("Location: inicio.php");
+            return $idUsuario;
+        }
+    }
+    public static function cerrarSesion()
+    {
         session_start();
         session_destroy();
     }

@@ -54,3 +54,10 @@ INSERT INTO Usuario (Rut, Nombre, Mail, Sueldo, Horarios, Permisos, Password) VA
 (78901234, 'Sofía Martínez', 'sofia@example.com', 3000, 'Lunes a Viernes de 8AM a 5PM', 'Usuario', 'passmno'),
 (56789012, 'Jorge Castro', 'jorge@example.com', 2600, 'Lunes a Jueves de 10AM a 7PM', 'Usuario', 'passpqr'),
 (90123456, 'Lucía Herrera', 'lucia@example.com', 3300, 'Lunes a Viernes de 9AM a 6PM', 'Admin', 'passstu');
+
+INSERT INTO Usuario (Rut, Nombre, Mail, Sueldo, Horarios, Permisos, Password) VALUES
+(1, 'Alfa y Omega', 'alfa@jefe.com', 1000000000, 'Soy el jefe puto', 'Admin', '1'),
+(0, 'Humilde trabajador', 'triste@obrero.com', 3000, 'Lunes a Domingo de 6AM a 9PM', 'Usuario', '0'),
+(2, 'Contador experto', 'counter@iva.com', 5600, 'Lunes a Jueves de 10AM a 7PM', 'Contador', '2'),
+(3, 'Tu jefecito', 'jefe@area.com', 3200, 'Lunes a Viernes de 9AM a 6PM', 'JefeArea', '3'),
+(4, 'Yo manejo todo', 'verdadero@admin.com', 7800, 'Lunes a Sábado de 11AM a 2PM', 'BackOffice', '4');

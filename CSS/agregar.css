@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "lato", sans-seriff;
+  /*display: grid;*/
+  align-items: center;
+  font-size: 20px;
+}
+
+/* Este es el contenedor del formulario*/
+.form-register {
+  width: 90%;
+  background: rgb(29, 33, 37);
+  padding: 30px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  font-family: "calibri";
+  color: white;
+  opacity: 0.95;
+}
+
+/*Esto afecta directamente el título del formulario*/
+.form-register h4 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/*Este es el estipo de los valores de Modificar.php*/
+.controles {
+  width: 100%;
+  background: #24303c;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  border: 1px solid #0b0b0b;
+  font-family: "calibri";
+  font-size: 18px;
+  color: rgb(190, 178, 178);
+}
+
+/*Este es el estilo de la mayor parte de los inputs del formulario*/
+.controls {
+  width: 48%;
+  background: #24303c;
+  padding: 20px;
+  margin-left: 5px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  border: 1px solid #616363;
+  font-family: "calibri";
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+/*Boton del formulario*/
+.form-register .bottom {
+  width: 100%;
+  background-color: rgb(8, 9, 10);
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+/*Hover del boton del*/
+.form-register .bottom:hover {
+  background: #39404e;
+  border: none;
+  padding: 11px;
+  color: white;
+  border: 1px solid #0e0f11;
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
