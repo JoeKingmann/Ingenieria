@@ -31,9 +31,9 @@ if ($resultado) {
     <div class="dropdown">
         <button onclick="toggleDropdown()" class="dropbtn">Menú</button>
         <div id="myDropdown" class="dropdown-content">
-            <a href="inicio.php">Inicio</a>
+            <a href="/Ingenieria/inicio.php">Inicio</a>
             <a href="probando.php">Probando</a>
-            <a href="CloseSession.php">Cerrar Sesion</a>
+            <a href="/Ingenieria/CloseSession.php">Cerrar Sesion</a>
         </div>
     </div>
 
@@ -53,8 +53,8 @@ if ($resultado) {
         <div class="dropdown">
             <button onclick="toggleDropdown3()" class="dropbtn">Usuarios</button>
             <div id="DropdownBackOffice" class="dropdown-content">
-                <a href="agregar.php">Ingresar Usuarios</a>
-                <a href="usuarios.php">Ver Usuarios</a>
+                <a href="/Ingenieria/agregar.php">Ingresar Usuarios</a>
+                <a href="/Ingenieria/usuarios.php">Ver Usuarios</a>
             </div>
         </div>
         <?php
