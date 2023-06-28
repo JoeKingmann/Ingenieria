@@ -4,7 +4,7 @@ class conectar{
 
     public static function Conexion(){
         $user="root";
-        $pass="nicolas";
+        $pass="";
         $server="localhost";
         $db="ing";
         try{

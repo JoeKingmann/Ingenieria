@@ -1,37 +1,6 @@
 <?php
 include("menu.php");
-
-if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
-    $id = $_GET["id"];
-    $action = $_GET["action"];
-
-    // Verificar si el id pertenece a un registro válido en la tabla JefeTrabajador
-    $consulta = $conexion->query("SELECT * FROM JefeTrabajador WHERE id_solicitud = '$id'");
-    $trabajador = $consulta->fetch();
-
-    if (!$trabajador) {
-        echo "El registro no existe";
-        exit;
-    }
-
-    // Cambiar el valor de la columna "Aprobación" según la acción realizada
-    if ($action == "aprobar") {
-        $aprobacion = "Aprobado";
-    } elseif ($action == "rechazar") {
-        $aprobacion = "Rechazado";
-    } else {
-        echo "Acción inválida";
-        exit;
-    }
-
-    // Actualizar el valor de "Aprobación" en la tabla JefeTrabajador
-    $update = $conexion->prepare("UPDATE JefeTrabajador SET Aprobación = :aprobacion WHERE id_solicitud = :id");
-    $update->bindParam(":aprobacion", $aprobacion);
-    $update->bindParam(":id", $id);
-    $update->execute();
-}
-
-$gsent = $conexion->query("SELECT * FROM JefeTrabajador WHERE Rut_aprobante = '$rut' AND Aprobación = 'En espera'");
+$gsent = $conexion->query("SELECT * FROM Solicitudes WHERE Rut_aprobante = '$rut' AND Aprobación = 'En espera'");
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +20,7 @@ $gsent = $conexion->query("SELECT * FROM JefeTrabajador WHERE Rut_aprobante = '$
             color: #fff;
             background-color: #333;
         }
-        
+
         .botones {
             margin-left: auto;
             margin-right: auto;
@@ -127,12 +96,15 @@ $gsent = $conexion->query("SELECT * FROM JefeTrabajador WHERE Rut_aprobante = '$
                 </td>
                 <td>
                     <div class="botoncitoParWrapper">
-                        <a class="botoncitoPar" href="?id=<?php echo $trabajador['id_solicitud']; ?>&action=aprobar">Aprobar</a>
-                        <a class="botoncitoPar" href="?id=<?php echo $trabajador['id_solicitud']; ?>&action=rechazar">Rechazar</a>
+                        <a class="botoncitoPar"
+                            href="soli.php?id=<?php echo $trabajador['id_solicitud']; ?>&action=Aprobada">Aprobar</a>
+                        <a class="botoncitoPar"
+                            href="soli.php?id=<?php echo $trabajador['id_solicitud']; ?>&action=Rechazada">Rechazar</a>
                     </div>
                 </td>
             </tr>
         <?php endforeach; ?>
     </table>
 </body>
+
 </html>

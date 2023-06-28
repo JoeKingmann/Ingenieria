@@ -33,10 +33,9 @@ $resultado2 = $consulta2->fetch(PDO::FETCH_ASSOC);
 $Rut_aprobante = $resultado2['rut_superior'];
 $Aprobacion = 'En espera';
 
-$insert = $cnx->prepare('INSERT INTO JefeTrabajador (id_solicitud, Rut_aprobante, Aprobación, Rut_solicitante, Fecha) 
-            VALUES (?,?,?,?,?)');
+$insert = $cnx->prepare('INSERT INTO Solicitudes (Rut_aprobante, Aprobación, Rut_solicitante, Fecha) 
+            VALUES (?,?,?,?)');
 
-$insert->execute([$_GET["id_solicitud"], $Rut_aprobante, $Aprobacion, $_GET["Rut_solicitante"], $_GET["Fecha"]]);
+$insert->execute([$Rut_aprobante, $Aprobacion, $idUsuario, $_GET["Fecha"]]);
 header('Location: /Ingenieria/crearsoli.php');
 ?>
-<script src="ojito.js" type="text/javascript"></script>

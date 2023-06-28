@@ -1,6 +1,6 @@
 <?php
 include("menu.php");
-$gsent = $conexion->query("SELECT * FROM JefeTrabajador WHERE Rut_solicitante = '$rut'");
+$gsent = $conexion->query("SELECT * FROM Solicitudes WHERE Rut_solicitante = '$rut' ORDER BY Fecha DESC");
 ?>
 
 <!DOCTYPE html>
