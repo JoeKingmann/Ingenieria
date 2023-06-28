@@ -39,7 +39,7 @@ include("menu.php");
     <script>
         function cerrarSesion() {
             if (confirm("¿Estás seguro de que deseas cerrar sesión?")) {
-                window.location.href = "CloseSession.php";
+                window.location.href = "/Ingenieria/CloseSession.php";
             }
         }
     </script>

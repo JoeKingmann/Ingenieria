@@ -19,7 +19,7 @@ class SessionManager
             return $idUsuario;
         } else {
             // El usuario no ha iniciado sesión, redirigir a la página de inicio de sesión
-            header("Location: index.php");
+            header("Location: /Ingenieria/index.php");
             exit;
         }
     }
@@ -31,7 +31,7 @@ class SessionManager
         if (isset($_SESSION['Rut_usuario'])) {
             // El usuario ha iniciado sesión, puedes acceder al ID almacenado en la variable de sesión
             $idUsuario = $_SESSION['Rut_usuario'];
-            header("Location: inicio.php");
+            header("Location: /Ingenieria/inicio.php");
             return $idUsuario;
         }
     }

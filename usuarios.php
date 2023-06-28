@@ -77,11 +77,6 @@ $gsent = $conexion->query("SELECT Rut, Nombre, Horarios, Mail, Permisos FROM Usu
 					<?php echo $trabajador['Horarios']; ?>
 				</td>
 				<td>
-<<<<<<< HEAD
-					<a class="botoncito"
-						href="/Metodos/eliminar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
-=======
->>>>>>> 95e61d7a88efb4f540398394cf2742ca909e5122
 
 					<div class="botoncitoParWrapper">
 						<a class="botoncitoPar"

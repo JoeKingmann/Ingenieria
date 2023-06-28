@@ -1,5 +1,10 @@
 <?php
 include("menu.php");
+
+// Realizar consulta SQL para obtener los usuarios
+$consultaUsuarios = "SELECT Rut, Nombre FROM Usuario WHERE Permisos='Admin' OR Permisos='JefeArea' OR Permisos='BackOffice'";
+$gsentUsuarios = $conexion->query($consultaUsuarios);
+$usuarios = $gsentUsuarios->fetchAll();
 ?>
 
 
@@ -41,11 +46,12 @@ include("menu.php");
 				<option value="JefeArea">Jefe de Área</option>
             </select>
             <select class="controls" name="rut_superior" id="rut_superior" required>
-				<option value="">Seleccionar un superior</option>
-				<option value="45432564">Juan Belaunde</option>
-				<option value="206757949">Alicia Herrera</option>
-				<option value="0">Administrador</option>
-			</select>
+    		<option value="">Seleccionar un superior</option>
+    		<?php foreach ($usuarios as $usuario): ?>
+        	<option value="<?php echo $usuario['Rut']; ?>"><?php echo $usuario['Nombre']; ?></option>
+    		<?php endforeach; ?>
+		</select>
+
 
 
 			<input class="controls" type="text" name="contraseña" id="contraseña" placeholder="Ingrese la contraseña"

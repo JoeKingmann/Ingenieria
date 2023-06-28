@@ -10,88 +10,41 @@ $gsent = $conexion->query("SELECT Rut, Nombre, Horarios, Mail, Permisos, Passwor
 	<title>Trabajadores</title>
 	<link rel="stylesheet" href="../CSS/e.css">
 	<style>
-		table {
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
+		.container {
+			margin: 20px auto;
 			width: 70%;
-			border-collapse: collapse;
+			border: 1px solid #ccc;
+			padding: 20px;
 			font-family: Arial, sans-serif;
-			color: #fff;
-			background-color: #333;
+			background-color: #ccc; /* Color de fondo */
+		}
+
+		.container p {
+			margin: 10px 0;
 		}
 
 		.botones {
-			margin-left: auto;
-			margin-right: auto;
+			margin-top: 20px;
 			text-align: center;
-			width: 75%;
-			font-family: Arial, sans-serif;
-		}
-
-
-		th,
-		td {
-			padding: 12px 105px;
-			text-align: center;
-		}
-
-		th {
-			background-color: #555;
-			font-weight: bold;
-			border-bottom: 2px solid #444;
-		}
-
-		td {
-			border-bottom: 1px solid #444;
-		}
-
-		tr:hover td {
-			background-color: #444;
-		}
-
-		.highlight {
-			background-color: #666;
 		}
 	</style>
 </head>
 
 <body>
 	<h2 style="text-align: center; margin: 10px;">Trabajadores</h2>
-	<table>
-		<tr>
-			<th>Rol</th>
-			<th>Nombre</th>
-			<th>Horario</th>
-			<th>Correo</th>
-			<th>Contraseña</th>
-		</tr>
-		<?php foreach ($gsent as $trabajador): ?>
-			<tr>
-				<td>
-					<?php echo $trabajador['Permisos']; ?>
-				</td>
-				<td>
-					<?php echo $trabajador['Nombre']; ?>
-				</td>
-				<td>
-					<?php echo $trabajador['Horarios']; ?>
-				</td>
-				<td>
-<<<<<<< HEAD
-					<a class="botoncito"
-						href="/Metodos/eliminar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
-=======
-					<?php echo $trabajador['Mail']; ?>
->>>>>>> 95e61d7a88efb4f540398394cf2742ca909e5122
-				</td>
-				<td>
-					<?php echo $trabajador['Password']; ?>
-				</td>
+	<?php foreach ($gsent as $trabajador): ?>
+		<div class="controls">
+			<p><strong>Rol:</strong> <?php echo $trabajador['Permisos']; ?></p>
+			<p><strong>Nombre:</strong> <?php echo $trabajador['Nombre']; ?></p>
+			<p><strong>Horario:</strong> <?php echo $trabajador['Horarios']; ?></p>
+			<p><strong>Correo:</strong> <?php echo $trabajador['Mail']; ?></p>
+			<p><strong>Contraseña:</strong> <?php echo $trabajador['Password']; ?></p>
+			<div class="botones">
+				<a class="botoncito" href="/Metodos/eliminar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
+			</div>
+		</div>
+	<?php endforeach; ?>
 
-			</tr>
-		<?php endforeach; ?>
-	</table>
 	<section class="form-register">
 		<form id="Formulario" action="edit.php" method="get">
 			<input type="hidden" name="id" value="<?php echo $id; ?>">
@@ -106,8 +59,6 @@ $gsent = $conexion->query("SELECT Rut, Nombre, Horarios, Mail, Permisos, Passwor
 			<input class="controls" type="text" name="variable" id="variable" placeholder="Ingrese el valor" required>
 			<input class="bottom" type="submit" value="Agregar Usuario">
 		</form>
-
-
 	</section>
 
 </body>

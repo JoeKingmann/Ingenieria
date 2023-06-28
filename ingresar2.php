@@ -8,6 +8,6 @@ $insert = $cnx->prepare('INSERT INTO Liquidaciones (id_liquidaciones, Rut, monto
             VALUES (?,?,?,?)');
 
 $insert->execute([$_GET["id_liquidaciones"], $_GET["Rut"], $_GET["monto"], $_GET["Fecha"]]);
-header('Location:agrliq.php');
+header('Location:/Ingenieria/agrliq.php');
 ?>
 <script src="ojito.js" type="text/javascript"></script>

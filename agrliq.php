@@ -25,7 +25,7 @@ include("menu.php");
 
 <body>
 	<section class="form-register">
-		<form id="Formulario" action="ingresar2.php" method="get">
+		<form id="Formulario" action="/Ingenieria/ingresar2.php" method="get">
 			<h4>Ingreso de liquidación</h4>
 			<input class="controls" type="number" name="id_liquidaciones" id="id_liquidaciones" placeholder="Ingrese el ID de liquidación" required>
 			<input class="controls" type="number" name="Rut" id="Rut" placeholder="Ingrese el Rut" required>

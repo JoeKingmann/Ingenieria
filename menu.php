@@ -31,14 +31,8 @@ if ($resultado) {
     <div class="dropdown">
         <button onclick="toggleDropdown()" class="dropbtn">Menú</button>
         <div id="myDropdown" class="dropdown-content">
-<<<<<<< HEAD
-            <a href="inicio.php">Inicio</a>
-            <a href="CloseSession.php">Cerrar Sesion</a>
-=======
             <a href="/Ingenieria/inicio.php">Inicio</a>
-            <a href="probando.php">Probando</a>
             <a href="/Ingenieria/CloseSession.php">Cerrar Sesion</a>
->>>>>>> 95e61d7a88efb4f540398394cf2742ca909e5122
         </div>
     </div>
 
@@ -48,7 +42,7 @@ if ($resultado) {
         <div class="dropdown">
             <button onclick="toggleDropdown2()" class="dropbtn">Información</button>
             <div id="DropdownAdmin" class="dropdown-content">
-                <a href="trabajadores.php">Trabajadores</a>
+                <a href="/Ingenieria/trabajadores.php">Trabajadores</a>
             </div>
         </div>
         <?php
@@ -57,14 +51,19 @@ if ($resultado) {
         <div class="dropdown">
             <button onclick="toggleDropdown3()" class="dropbtn">Usuarios</button>
             <div id="DropdownBackOffice" class="dropdown-content">
-<<<<<<< HEAD
-                <a href="agregar.php">Ingresar Usuarios</a>
-                <a href="usuarios.php">Ver Usuarios</a>
-                <a href="agrliq.php">Ingresar Liquidaciones</a>
-=======
                 <a href="/Ingenieria/agregar.php">Ingresar Usuarios</a>
-                <a href="/Ingenieria/usuarios.php">Ver Usuarios</a>
->>>>>>> 95e61d7a88efb4f540398394cf2742ca909e5122
+                <a href="/Ingenieria/usuariosbo.php">Ver Usuarios</a>
+                <a href="/Ingenieria/crearsoli.php">Realizar solicitud</a>
+                <a href="/Ingenieria/versoli.php">Mis solicitudes</a>
+            </div>
+        </div>
+        <?php
+    } elseif ($permisos == 'Contador') {
+        ?>
+        <div class="dropdown">
+            <button onclick="toggleDropdown3()" class="dropbtn">Usuarios</button>
+            <div id="DropdownBackOffice" class="dropdown-content">
+                <a href="/Ingenieria/agrliq.php">Ingresar Liquidaciones</a>
             </div>
         </div>
         <?php
@@ -73,16 +72,17 @@ if ($resultado) {
         <div class="dropdown">
             <button onclick="toggleDropdown4()" class="dropbtn">Información</button>
             <div id="DropdownComun" class="dropdown-content">
-                <a href="liquidaciones.php">Mis Liquidaciones</a>
-                <a href="#">Mis permisos</a>
+                <a href="/Ingenieria/liquidaciones.php">Mis Liquidaciones</a>
+                <a href="/Ingenieria/crearsoli.php">Realizar solicitud</a>
+                <a href="/Ingenieria/versoli.php">Mis solicitudes</a>
                 <a href="#">Historial de Horarios</a>
             </div>
         </div>
         <div class="dropdown">
             <button onclick="toggleDropdown5()" class="dropbtn">Trabajadores</button>
             <div id="DropdownJefeArea" class="dropdown-content">
-                <a href="agregar.php">Solicitudes de permisos</a>
-                <a href="usuarios.php">Horarios</a>
+                <a href="/Ingenieria/aceptarsoli.php">Solicitudes de permisos</a>
+                <a href="/Ingenieria/usuarios.php">Horarios</a>
             </div>
         </div>
         <?php
@@ -91,8 +91,9 @@ if ($resultado) {
         <div class="dropdown">
             <button onclick="toggleDropdown3()" class="dropbtn">Información</button>
             <div id="DropdownBackOffice" class="dropdown-content">
-                <a href="liquidaciones.php">Mis Liquidaciones</a>
-                <a href="#">Mis permisos</a>
+                <a href="/Ingenieria/liquidaciones.php">Mis Liquidaciones</a>
+                <a href="/Ingenieria/crearsoli.php">Realizar solicitud</a>
+                <a href="/Ingenieria/versoli.php">Mis solicitudes</a>
                 <a href="#">Historial de Horarios</a>
             </div>
         </div>

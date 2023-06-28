@@ -4,9 +4,9 @@ class conectar{
 
     public static function Conexion(){
         $user="root";
-        $pass="espe";
+        $pass="nicolas";
         $server="localhost";
-        $db="WeConnect";
+        $db="ing";
         try{
             $conn = new PDO("mysql:host=$server;dbname=$db", $user, $pass);
         } catch (PDOException $exp){
