@@ -27,11 +27,11 @@ if (isset($_GET['usuario']) && isset($_GET['password'])) {
         // Ingreso con exito y se dirige al inicio
         session_start();
         SessionManager::iniciarSesion($resultado['Rut']);
-        header('Location: /Ingenieria/inicio.php');
+        header('Location: inicio.php');
         exit;
     } else {
         // Redirige nuevamente al inicio para volver a intentarlo
-        header('Location: /Ingenieria/index.php');
+        header('Location: index.php');
     }
 }
 ?>

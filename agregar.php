@@ -39,7 +39,14 @@ include("menu.php");
 				<option value="Contador">Contador</option>
 				<option value="BackOffice">BackOffice</option>
 				<option value="JefeArea">Jefe de Área</option>
+            </select>
+            <select class="controls" name="rut_superior" id="rut_superior" required>
+				<option value="">Seleccionar un superior</option>
+				<option value="45432564">Juan Belaunde</option>
+				<option value="206757949">Alicia Herrera</option>
+				<option value="0">Administrador</option>
 			</select>
+
 
 			<input class="controls" type="text" name="contraseña" id="contraseña" placeholder="Ingrese la contraseña"
 				required>

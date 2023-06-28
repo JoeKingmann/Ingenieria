@@ -77,9 +77,7 @@ include("../menu.php");
 				</td>
 				<td>
 					<a class="botoncito"
-						href="/Ingenieria/Metodos/eliminar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
-					<a class="botoncito"
-						href="/Ingenieria/Metodos/editar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
+						href="/Metodos/eliminar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
 				</td>
 			</tr>
 		<?php endforeach; ?>

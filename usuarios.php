@@ -1,6 +1,6 @@
 <?php
 include("menu.php");
-$gsent = $conexion->query("SELECT Rut, Nombre, Horarios, Mail, Permisos FROM Usuario WHERE Rut != '$rut' ORDER BY Nombre ASC");
+$gsent = $conexion->query("SELECT Rut, Nombre, Horarios, Mail, Permisos FROM Usuario WHERE Rut != '$rut' AND rut_superior = '$rut' ORDER BY Nombre ASC");
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +78,7 @@ $gsent = $conexion->query("SELECT Rut, Nombre, Horarios, Mail, Permisos FROM Usu
 				</td>
 				<td>
 					<a class="botoncito"
-						href="/Ingenieria/Metodos/eliminar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
+						href="/Metodos/eliminar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
 
 				</td>
 			</tr>
