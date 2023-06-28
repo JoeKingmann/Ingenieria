@@ -8,7 +8,7 @@ $gsent = $conexion->query("SELECT Rut, Nombre, Horarios, Mail, Permisos FROM Usu
 
 <head>
 	<title>Trabajadores</title>
-	<link rel="stylesheet" href="CSS/jja.css">
+	<link rel="stylesheet" href="CSS/l.css">
 	<style>
 		table {
 			margin-left: auto;
@@ -77,10 +77,22 @@ $gsent = $conexion->query("SELECT Rut, Nombre, Horarios, Mail, Permisos FROM Usu
 					<?php echo $trabajador['Horarios']; ?>
 				</td>
 				<td>
+<<<<<<< HEAD
 					<a class="botoncito"
 						href="/Metodos/eliminar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
+=======
+>>>>>>> 95e61d7a88efb4f540398394cf2742ca909e5122
 
+					<div class="botoncitoParWrapper">
+						<a class="botoncitoPar"
+							href="/Ingenieria/Metodos/eliminar.php?id=<?php echo $trabajador['Rut'] ?>">Eliminar</a>
+
+						<a class="botoncitoPar"
+							href="/Ingenieria/Metodos/editar.php?id=<?php echo $trabajador['Rut'] ?>">Editar</a>
+
+					</div>
 				</td>
+
 			</tr>
 		<?php endforeach; ?>
 	</table>

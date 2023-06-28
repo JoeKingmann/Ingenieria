@@ -18,11 +18,11 @@ body {
 
 /* Este es el contenedor del formulario*/
 .form-register {
-  width: 400px;
+  width: 800px;
   background: rgb(29, 33, 37);
   padding: 30px;
   margin: auto;
-  margin-top: 300px;
+  margin-top: 30px;
   border-radius: 4px;
   font-family: "calibri";
   color: white;
@@ -86,7 +86,7 @@ body {
   cursor: pointer;
 }
 
-.botoncito{
+.botoncito {
   width: 24.6%;
   background-color: rgb(8, 9, 10);
   border: none;
@@ -105,17 +105,19 @@ body {
   border: 1px solid #0e0f11;
   cursor: pointer;
 }
-
-.botoncitoPar{
-  width: 12%;
+.botoncitoParWrapper {
+  white-space: nowrap;
+}
+.botoncitoPar {
   background-color: rgb(8, 9, 10);
   border: none;
   padding: 12px;
   color: white;
-  margin: 16px 0;
   font-size: 16px;
   border-radius: 40px;
   cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
 }
 .botoncitoPar:hover {
   background: #39404e;
@@ -124,6 +126,8 @@ body {
   color: white;
   border: 1px solid #0e0f11;
   cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 body {
